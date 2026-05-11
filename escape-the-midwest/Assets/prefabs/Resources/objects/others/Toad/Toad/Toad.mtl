@@ -1,0 +1,29 @@
+newmtl NemuMat44
+Kd 0.800000 0.800000 0.800000
+illum 1
+map_Kd 26E73DFA_fix.png
+
+newmtl NemuMat45
+Kd 0.800000 0.800000 0.800000
+illum 1
+map_Kd 1C72995D_fix.png
+
+newmtl NemuMat32
+Kd 0.800000 0.800000 0.800000
+illum 1
+map_Kd cap.png
+
+newmtl NemuMat47
+Kd 0.800000 0.800000 0.800000
+illum 1
+map_Kd vest.png
+
+newmtl NemuMat49
+Kd 0.800000 0.800000 0.800000
+illum 1
+map_Kd skin.png
+
+newmtl NemuMat50
+Kd 0.800000 0.800000 0.800000
+illum 1
+map_Kd shoe.png

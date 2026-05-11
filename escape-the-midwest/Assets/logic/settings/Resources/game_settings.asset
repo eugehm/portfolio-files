@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ee8640762517c042bdfa2c3752bb351, type: 3}
+  m_Name: game_settings
+  m_EditorClassIdentifier: 
+  starting_character: {fileID: 11400000, guid: e8ee770b2778b4f10811240dbafd1a08, type: 2}
+  starting_extra_lives: 2
+  starting_extra_continues: 2
+  starting_gravity: -9.81
+  allow_character_change_with_escape_key: 1
+  starting_fog_color: {r: 0.9481132, g: 0.9952453, b: 1, a: 1}
+  starting_fog_density: 0.015

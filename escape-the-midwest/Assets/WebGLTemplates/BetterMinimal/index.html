@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>{{{ PRODUCT_NAME }}}, a UMich EECS 298 Game</title>
+	<meta name="description" content="{{{ PRODUCT_DESCRIPTION }}}. Created by {{{ STUDENT_FULL_NAME }}} in Professor Austin Yarger's EECS 298 : 3D Technical Art and Animation course (eecs298.com) at the University of Michigan.">
+	<meta name="keywords" content="3D, platformer, game, umich, uofm, michigan, gamedev, art, animation, yarger, austin">
+    
+	{{{ MISC_META_TAGS }}}
+	
+	<style>
+        html,
+        body {
+            background: {{{ BACKGROUND || '#FFF' }}};
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+            padding: 0;
+            margin: 0;
+        }
+
+        #gameContainer {
+            background: transparent !important;
+            position: absolute;
+        }
+
+        #gameContainer canvas {
+            position: absolute;
+        }
+
+        #gameContainer canvas[data-pixel-art="true"] {
+            image-rendering: optimizeSpeed;
+            image-rendering: -webkit-crisp-edges;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -o-crisp-edges;
+            image-rendering: crisp-edges;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: optimize-contrast;
+            image-rendering: pixelated;
+            -ms-interpolation-mode: nearest-neighbor;
+        }
+
+        #loadingContainer {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        #logo {
+            max-width: 80%;
+            height: auto;
+            margin-bottom: 1rem;
+        }
+
+        #loadingBarContainer {
+            position: relative;
+            width: 50%;
+            height: 1rem;
+            margin: 0 auto;
+            background: transparent;
+        }
+
+        #loadingBar {
+            width: 0%;
+            height: 100%;
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="gameContainer">
+        <canvas id="unity-canvas" data-pixel-art="{{{ OPTIMIZE_FOR_PIXEL_ART }}}"></canvas>
+        <div id="loadingContainer">
+            <div id="loadingBarContainer">
+                <div id="loadingBar"></div>
+            </div>
+        </div>
+        <script src="Build/{{{ LOADER_FILENAME }}}"></script>
+        <script>
+            var canvas = document.querySelector("#unity-canvas");
+            var loadingContainer = document.querySelector("#loadingContainer");
+            var loadingBar = document.querySelector("#loadingBar");
+            var config = {
+                dataUrl: "Build/{{{ DATA_FILENAME }}}",
+                frameworkUrl: "Build/{{{ FRAMEWORK_FILENAME }}}",
+                codeUrl: "Build/{{{ CODE_FILENAME }}}",
+#if MEMORY_FILENAME
+                memoryUrl: "Build/{{{ MEMORY_FILENAME }}}",
+#endif
+#if SYMBOLS_FILENAME
+                symbolsUrl: "Build/{{{ SYMBOLS_FILENAME }}}",
+#endif
+                streamingAssetsUrl: "StreamingAssets",
+                companyName: "{{{ COMPANY_NAME }}}",
+                productName: "{{{ PRODUCT_NAME }}}",
+                productVersion: "{{{ PRODUCT_VERSION }}}",
+            };
+
+            var scaleToFit;
+            try {
+                scaleToFit = !!JSON.parse("{{{ SCALE_TO_FIT }}}");
+            } catch (e) {
+                scaleToFit = true;
+            }
+
+            function progressHandler(progress) {
+                var percent = progress * 100 + '%';
+                loadingBar.style.width = percent;
+
+                // Hide the loading container when loading is complete
+                if (progress >= 1) {
+                    loadingContainer.style.display = 'none'; // Hide the entire loading container
+                }
+            }
+
+            function onResize() {
+                var container = canvas.parentElement;
+                var w;
+                var h;
+
+                if (scaleToFit) {
+                    w = window.innerWidth;
+                    h = window.innerHeight;
+                } else {
+                    w = {{{ WIDTH }}};
+                    h = {{{ HEIGHT }}};
+                }
+
+                container.style.width = canvas.style.width = w + "px"; 
+                container.style.height = canvas.style.height = h + "px";
+                container.style.top = Math.floor((window.innerHeight - h) / 2) + "px";
+                container.style.left = Math.floor((window.innerWidth - w) / 2) + "px";
+            }
+
+            createUnityInstance(canvas, config, progressHandler).then(function (instance) {
+                canvas = instance.Module.canvas;
+                onResize();
+            });
+            window.addEventListener('resize', onResize);
+            onResize();
+
+            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                // Mobile device style: fill the whole browser client area with the game canvas:
+                const meta = document.createElement('meta');
+                meta.name = 'viewport';
+                meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+                document.getElementsByTagName('head')[0].appendChild(meta);
+            }
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+Game created by Eugenia Hernandez-Martinez in EECS 298 : 3D Technical Art and Animation
+
+Technology created by Austin Yarger at the University of Michigan
+
+NativeWebSocket by endel (Apache License 2.0)
+https://github.com/endel/NativeWebSocket/blob/master/LICENSE
+
+DynamicBone by Will Hong (Free educational license)
+https://assetstore.unity.com/packages/tools/animation/dynamic-bone-16743
+https://d7j0bkr9sq1ce.cloudfront.net/ShareX/2025/October/10/14/51/45/438/0f9e0702-93a4-4b6d-8882-ce070a5f6083/G91YAS2ZlB.png 
+
+Unity-SerializableDictionary by azixMcAze (MIT License)
+https://github.com/azixMcAze/Unity-SerializableDictionary
+
+computer mouse icon by Jackson Nguyen (Pixabay free license).
+https://pixabay.com/vectors/computer-mouse-mouse-wireless-mouse-2690350/
+
+“Simple lo-fi track n.4” by Alittlebitdrunkguy
+https://freesound.org/people/Alittlebitdrunkguy/sounds/447513/
+
+“Orgelmusic_j008b.wav” by j008b
+https://freesound.org/people/j008b/sounds/84572/
+
+“Happy Game.mp3” by WayTa
+https://freesound.org/people/WayTa/sounds/615476/
+
+“Happy sandbox” by Unlistenable
+https://freesound.org/people/Unlistenable/sounds/416778/
+
+Happy Background Music Orchestra (Loop) by Migfus20
+https://freesound.org/people/Migfus20/sounds/561383/
+
+"Black Santa" Font by imagex
+https://www.dafont.com/black-santa.font?back=theme
+
+"Steps in snow and wet ground" by arnaud coutancier
+https://freesound.org/people/arnaud%20coutancier/sounds/417647/
+
+"oof.wav" by fotoshop
+https://freesound.org/people/fotoshop/sounds/47356/
+
+"Trumpet sad chromatic wah wah.wav" by SpliceSound
+https://freesound.org/people/SpliceSound/sounds/369873/
+
+"Jump_C_02" by cabled_mess
+https://freesound.org/people/cabled_mess/sounds/350904/
+
+"Success Jingle" by Kastenfrosch
+https://freesound.org/people/Kastenfrosch/sounds/521949/
+
+"You failed (game jingle)" by Rolly-SFX
+https://freesound.org/people/Rolly-SFX/sounds/626260/
