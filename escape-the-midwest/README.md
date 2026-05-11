@@ -1,6 +1,6 @@
 # Escape The Midwest
 
-Final project for EECS 298: 3D Tech Art and Animation at the University of Michigan. [Play it here.](https://eugehm.itch.io/escape-the-midwest)
+Final project for EECS 298: 3D Tech Art and Animation at the University of Michigan. Play it [here](https://eugehm.itch.io/escape-the-midwest).
 
 A 3D platformer assembled in Unity using a course-provided framework as a base. All 3D assets were modeled in Blender, all textures were designed in Piskel, and all voice overs were recorded and integrated by me. Beyond assembly, I added custom scripts and modified existing ones for a snowball zone mechanic, a new gameplay section with its own camera behavior, hazard system, and zone triggers.
 
