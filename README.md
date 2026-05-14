@@ -8,4 +8,3 @@ A collection of code and asset samples from my projects, organized by project. E
 | `cor-draconis/` | Cor Draconis | WolverineSoft Studio | Unity |
 | `defenders-of-the-dune/` | Defenders of the Dune | WolverineSoft Studio | Unity, Figma |
 | `dream-synthesizer/` | Dream Synthesizer | WolverineSoft Studio | Unity, Piskel |
-| `escape-the-midwest/` | Escape The Midwest | EECS 298 Final Project | Unity, Blender, Piskel |
