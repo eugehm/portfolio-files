@@ -4,7 +4,6 @@ A collection of code and asset samples from my projects, organized by project. E
 
 | Folder | Project | Context | Stack |
 |---|---|---|---|
-| `blight-speed/` | Blight Speed | Michigame Jam | Blender |
 | `cor-draconis/` | Cor Draconis | WolverineSoft Studio | Unity |
 | `defenders-of-the-dune/` | Defenders of the Dune | WolverineSoft Studio | Unity, Figma |
 | `dream-synthesizer/` | Dream Synthesizer | WolverineSoft Studio | Unity, Piskel |
